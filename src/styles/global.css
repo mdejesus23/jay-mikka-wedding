@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Allura';
+    src: url('/public/fonts/Allura-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('/public//fonts/CormorantGaramond-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('/public//fonts/CormorantGaramond-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('/public/fonts/CormorantGaramond-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'Parisienne';
+    src: url('/public/fonts/Parisienne-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} */
+
+:root {
+    /* colors */
+    --primary-bgcolor: #FAFAFA;
+    --secondary-bgcolor: #334667;
+    --tertiary-bgcolor: #D4B968;
+    --fourth-bgcolor: #71869E;
+    --other-bgcolor1: #4C5D79;
+
+    /* font color */
+    --primary-font-color: #FAFAFA;
+    --secondary-font-color: #334667;
+
+    /* font family */
+    --primary-font: "Cormorant Garamond";
+    --secondary-font: "Parisienne"
+    --tertiary-font: "Allura";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 3rem;
+    background-color: var(--primary-bgcolor);
+    font-family: var(--primary-font);
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+    font-family: var(--tertiary-font);
+  }
+  
+  h2 {
+    font-size: 4rem;
+  }
+  
+  h3 {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 1400px) {
+    html {
+      font-size: 62.5%;
+    }
+  
+    body {
+      padding: 0;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    html {
+      font-size: 56%;
+    }
+  }
+
+
+  /* Header and navigation */
+  header {
+    background-color: var(--fourth-bgcolor);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--primary-bgcolor)
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem;
+  }
+
+  .nav-links a {
+    font-size: 2rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    color: var(--primary-font-color);
+  }
+
+  .nav-links span {
+    font-size: 5rem;
+    color: var(--primary-font-color);
+    /* color: var(--tertiary-bgcolor); */
+    font-family: "Parisienne", cursive;
+    font-weight: bold;
+  }
+  
+  
+  
+
+
