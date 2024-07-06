@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Cormorant Garamond';
-    src: url('/public//fonts/CormorantGaramond-Regular.woff2') format('woff2');
+    src: url('/fonts/CormorantGaramond-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Cormorant Garamond';
-    src: url('/public//fonts/CormorantGaramond-SemiBold.woff2') format('woff2');
+    src: url('/fonts/CormorantGaramond-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -24,19 +24,19 @@
 
 @font-face {
     font-family: 'Cormorant Garamond';
-    src: url('/public/fonts/CormorantGaramond-Bold.woff2') format('woff2');
+    src: url('/fonts/CormorantGaramond-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
-/* @font-face {
+@font-face {
     font-family: 'Parisienne';
-    src: url('/public/fonts/Parisienne-Regular.woff2') format('woff2');
+    src: url('/fonts/Parisienne-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-} */
+}
 
 :root {
     /* colors */
@@ -49,6 +49,7 @@
     /* font color */
     --primary-font-color: #FAFAFA;
     --secondary-font-color: #334667;
+    --tertiary-font-color: #D4B968;
 
     /* font family */
     --primary-font: "Cormorant Garamond";
@@ -68,7 +69,7 @@
   }
 
   body {
-    padding: 3rem;
+    padding: 3rem 8rem;
     background-color: var(--primary-bgcolor);
     font-family: var(--primary-font);
   }
@@ -100,6 +101,229 @@
     font-size: 3rem;
   }
 
+  main {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  /* Header and navigation */
+  header {
+    background-color: var(--fourth-bgcolor);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9rem;
+    /* border-bottom: 1px solid var(--primary-bgcolor) */
+  }
+
+.mobile-logo {
+  display: none;
+}
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4rem;
+  }
+
+  .nav-links a {
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    color: var(--tertiary-font-color);
+    transition: color 0.3s;
+  }
+
+  .nav-links li:hover a {
+    color: var(--primary-font-color);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.6rem;
+    padding: 0 1rem;
+  }
+
+  .logo p {
+    font-size: 4.5rem;
+    color: var(--primary-font-color);
+    /* color: var(--secondary-font-color); */
+    font-family: "Parisienne", cursive;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .logo-container {
+    width: 5rem;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  /* hero section */
+  .hero {
+    overflow: visible;
+    margin-bottom: -3px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .main-image-container {
+    width: 100%;
+    height: 110%;
+
+    background-image: url("/images/wedd.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .main-image-container img {
+    object-fit: cover;
+  }
+
+   
+  /* Event Details section */
+
+  .event-details {
+    width: 100%;
+    height: 100%;
+    padding: 4rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fourth-bgcolor);
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    margin: 2rem auto;
+    padding: 7rem;
+    background-image: url("/images/background-floral.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-details {
+    width: 80%;
+    height: 100%;
+    padding: 3rem;
+    margin: auto;
+    border: 1px solid var(--tertiary-bgcolor);
+  }
+
+  .content-details .adlib {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--tertiary-font-color);
+    margin: 1rem auto;
+  }
+
+  .cursive {
+    font-family: "Parisienne", cursive;
+  }
+
+  .content-details h1 {
+   margin: 4rem auto;
+   font-size: 6rem;
+   text-align: center;
+   color: var(--secondary-font-color);
+   font-family: "Parisienne", cursive;
+  }
+
+  .wedd-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  .wedd-date .day {
+    padding: 1rem;
+    border-top: 2px solid var(--tertiary-bgcolor);
+    border-bottom: 2px solid var(--tertiary-bgcolor)
+  }
+
+  .wedd-date .day-num {
+    font-family: "times new roman";
+    font-size: 8rem;
+    font-weight: 700;
+  
+  }
+
+
+  .wedd-date .hour {
+    padding: 1rem;
+    border-top: 2px solid var(--tertiary-bgcolor);
+    border-bottom: 2px solid var(--tertiary-bgcolor)
+  }
+
+  .month {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  
+  .content-details h2 {
+    text-align: center;
+    color: var(--tertiary-font-color);
+    margin: 2rem auto;
+  }
+  
+  
+
+  /* footer */
+  footer {
+    height: 20rem;
+    background-color: var(--fourth-bgcolor);
+    color: var(--tertiary-font-color);
+    font-size: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+  }
+
+  footer div {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  
+  footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+
+  .social-icons li {
+    transition: opacity 0.3s;
+  }
+
+
+  .social-icons li:hover {
+    opacity: 50%;
+  }
+
   @media (max-width: 1400px) {
     html {
       font-size: 62.5%;
@@ -116,39 +340,67 @@
     }
   }
 
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+    }
 
-  /* Header and navigation */
-  header {
-    background-color: var(--fourth-bgcolor);
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid var(--primary-bgcolor)
-  }
+    .content {
+      padding: 1rem;
+      margin: 0;
+    
+    }
 
-  .nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 3rem;
-  }
+    .content-details {
+      padding: 1rem;
+      margin: 0;
+      width: 95%;
+    }
 
-  .nav-links a {
-    font-size: 2rem;
-    font-family: var(--primary-font);
-    text-transform: uppercase;
-    color: var(--primary-font-color);
-  }
+    .wedd-date {
+      flex-direction: column;
+      column-gap: 2rem;
+      font-size: 4rem;
+    
+    }
 
-  .nav-links span {
-    font-size: 5rem;
-    color: var(--primary-font-color);
-    /* color: var(--tertiary-bgcolor); */
-    font-family: "Parisienne", cursive;
-    font-weight: bold;
-  }
+
+    /* mobile view */
+    .main-image-container {
+      width: 100%;
+      height: 100vh;
+    }
   
+
+    .mobile-logo {
+      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 0.6rem;
+      padding: 0 1rem;
+    }
+  
+    .mobile-logo p {
+      font-size: 3rem;
+      color: var(--primary-font-color);
+      /* color: var(--secondary-font-color); */
+      font-family: "Parisienne", cursive;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  
+    .mobile-logo-container {
+      width: 5rem;
+    }
+  
+    .mobile-logo img {
+      width: 100%;
+    }
+  
+  
+  }
+
   
   
 

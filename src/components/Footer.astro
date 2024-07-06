@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import facebook_icon from "../icons/facebook_icon.svg";
+import threads_icon from "../icons/threads_icon.svg";
+import x_icon from "../icons/x_icon.svg";
+---
+
+<footer>
+  <div class="row3">Follow us on social media</div>
+  <ul class="social-icons">
+    <li>
+      <a href="">
+        <Image src={facebook_icon} alt="facebook" width="30" height="30" />
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <Image src={threads_icon} alt="threads" width="30" height="30" />
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <Image src={x_icon} alt="X / twitter" width="30" height="30" />
+      </a>
+    </li>
+  </ul>
+  <p>Copyrights &copy; All Rights Reserved.</p>
+</footer>
