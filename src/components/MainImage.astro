@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import mainImage from "../images/ring.jpeg";
+---
+
+<div class="main-image">
+  <Image class="main-image" src={mainImage} alt={"main image"} />
+</div>
+
+<style>
+  .main-image {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .main-image img {
+    max-width: 400px;
+    max-height: 500px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 900px) {
+    .main-image {
+      width: 100%;
+      margin: 1rem auto;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .main-image img {
+      max-width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .main-image img {
+      max-width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+  }
+</style>

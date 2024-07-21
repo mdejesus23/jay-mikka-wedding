@@ -1,29 +1,26 @@
 ---
-import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-import mainImage from "../images/wedd-img-5.jpeg";
-import floralImage1 from "../images/wedd-img-main.jpeg";
-
+import MainImage from "../components/MainImage.astro";
 const pageTitle = "Wedding Website";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <section class="hero">
-    <div class="main-image-container">
-      <!-- <Image src={floralImage1} alt="Wedding image" /> -->
-    </div>
-  </section>
-
   <section class="event-details">
     <div class="content">
       <div class="content-details">
-        <div class="adlib">BY THE GRACE OF GOD</div>
-        <div class="adlib">AND WITH THE BLESSING OF OUR FAMILIES</div>
-        <div class="adlib">WE.</div>
+        <p class="adlib">
+          BY THE GRACE OF GOD <br /> AND WITH THE BLESSING OF OUR FAMILIES <br
+          />WE.
+        </p>
+
         <h1>Jay Mar <br /> and <br /> Ayessa Mikka</h1>
-        <div class="adlib">REQUEST THE HONOR OF YOUR PRESENCE AT</div>
-        <div class="adlib">OUR WEDDING CELEBRATION</div>
+
+        <MainImage />
+
+        <p class="adlib">
+          REQUEST THE HONOR OF YOUR PRESENCE AT OUR WEDDING CELEBRATION
+        </p>
         <div class="adlib cursive">See you at</div>
         <div class="wedd-date">
           <div class="day">SATURDAY</div>

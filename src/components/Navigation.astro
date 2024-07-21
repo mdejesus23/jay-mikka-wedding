@@ -2,20 +2,145 @@
 
 ---
 
-<ul class="nav-links">
-  <li><a href="/about">Our Story</a></li>
-  <li><a href="/entourage">Entourage</a></li>
-  <li><a href="/faq">FAQ</a></li>
-  <div class="logo">
-    <p>Jay</p>
-    <span class="logo-container"
-      ><img src="/images/wedding-ring.png" alt="logo" /></span
-    >
-    <p>Mikka</p>
-  </div>
-  <li><a href="/registry">Registry</a></li>
-  <li><a href="/gallery">Gallery</a></li>
-  <li><a href="/rsvp">RSVP</a></li>
-</ul>
+<nav>
+  <ul class="nav-links">
+    <li><a href="/about">OUR STORY</a></li>
+    <li><a href="/entourage">ENTOURAGE</a></li>
+    <li><a href="/faq">FAQ</a></li>
+    <li>
+      <a href="/" class="logo">
+        <h1>Jay</h1>
+        <span class="logo-container"
+          ><img src="/images/wedding-ring.png" alt="logo" /></span
+        >
+        <h1>Mikka</h1>
+      </a>
+    </li>
+    <li><a href="/registry">REGISTRY</a></li>
+    <li><a href="/gallery">GALLERY</a></li>
+    <li><a href="/rsvp">RSVP</a></li>
+  </ul>
 
-<style></style>
+  <!-- mobile -->
+  <ul class="mobile-nav-links">
+    <li>
+      <a href="/" class="mobile-logo">
+        <h1>Jay</h1>
+        <img src="/images/wedding-ring.png" alt="logo" />
+        <h1>Mikka</h1>
+      </a>
+    </li>
+    <li>Menu</li>
+  </ul>
+</nav>
+
+<!-- <a href="/" class="mobile-logo">
+  <h1>Jay</h1>
+  <span class="mobile-logo-container"
+    ><img src="/images/wedding-ring.png" alt="logo" /></span
+  >
+  <h1>Mikka</h1>
+</a> -->
+
+<style>
+  nav {
+    width: 100%;
+  }
+  .nav-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4rem;
+  }
+
+  .nav-links a {
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: var(--primary-font);
+    color: var(--tertiary-font-color);
+    transition: color 0.3s;
+  }
+
+  .nav-links li:hover a {
+    color: var(--primary-font-color);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.6rem;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+
+  .logo h1 {
+    font-size: 3rem;
+    color: var(--primary-font-color);
+    font-family: "Parisienne", cursive;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .logo:hover h1 {
+    color: var(--tertiary-font-color);
+  }
+
+  .logo-container {
+    width: 2.5rem;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  .logo-container {
+    width: 2.5rem;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  .mobile-nav-links {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+    }
+
+    .mobile-nav-links {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+
+    .mobile-nav-links h1 {
+      font-size: 2.5rem;
+      color: var(--primary-font-color);
+      font-family: "Parisienne", cursive;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 0.6rem;
+      padding: 0 1rem;
+      cursor: pointer;
+    }
+
+    .mobile-logo img {
+      /* width: 100%; */
+      width: 3.5rem;
+    }
+  }
+</style>
