@@ -41,7 +41,7 @@ function MobileMenu() {
         <nav className={`mobile-nav ${isOpen ? "open" : "close"}`}>
           <ul>
             <li>
-              <a href="/about">OUR STORY</a>
+              <a href="/our-story">OUR STORY</a>
             </li>
             <li>
               <a href="/entourage">ENTOURAGE</a>
@@ -53,7 +53,7 @@ function MobileMenu() {
               <a href="/gallery">GALLERY</a>
             </li>
             <li>
-              <a href="//rsvp">RSVP</a>
+              <a href="/rsvp">RSVP</a>
             </li>
             <li>
               <a href="/faq">FAQ</a>

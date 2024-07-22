@@ -155,11 +155,10 @@
     height: 100%;
     padding: 3rem;
     margin: auto;
-    /* border: 1px solid var(--tertiary-bgcolor); */
   }
 
   .content-details .adlib {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
     text-align: center;
     color: var(--tertiary-font-color);
@@ -504,8 +503,6 @@
 
     .content {
       padding: 1rem;
-      /* margin: 0; */
-
       margin-top: 5rem;
     }
 
@@ -527,7 +524,11 @@
   @media (max-width: 500px) {
     .content {
       padding: 1rem 0;
-      /* margin: 0; */
+    }
+
+    .content-details {
+      padding: 3rem 1rem 1rem 1rem;
+      width: 95%;
     }
 
   }
