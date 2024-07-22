@@ -2,7 +2,7 @@
 
 ---
 
-<nav>
+<nav class="regular-nav">
   <ul class="nav-links">
     <li><a href="/about">OUR STORY</a></li>
     <li><a href="/entourage">ENTOURAGE</a></li>
@@ -20,32 +20,13 @@
     <li><a href="/gallery">GALLERY</a></li>
     <li><a href="/rsvp">RSVP</a></li>
   </ul>
-
-  <!-- mobile -->
-  <ul class="mobile-nav-links">
-    <li>
-      <a href="/" class="mobile-logo">
-        <h1>Jay</h1>
-        <img src="/images/wedding-ring.png" alt="logo" />
-        <h1>Mikka</h1>
-      </a>
-    </li>
-    <li>Menu</li>
-  </ul>
 </nav>
-
-<!-- <a href="/" class="mobile-logo">
-  <h1>Jay</h1>
-  <span class="mobile-logo-container"
-    ><img src="/images/wedding-ring.png" alt="logo" /></span
-  >
-  <h1>Mikka</h1>
-</a> -->
 
 <style>
   nav {
     width: 100%;
   }
+
   .nav-links {
     height: 100%;
     display: flex;
@@ -104,43 +85,9 @@
     width: 100%;
   }
 
-  .mobile-nav-links {
-    display: none;
-  }
-
   @media (max-width: 900px) {
-    .nav-links {
+    .regular-nav {
       display: none;
-    }
-
-    .mobile-nav-links {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 1rem;
-    }
-
-    .mobile-nav-links h1 {
-      font-size: 2.5rem;
-      color: var(--primary-font-color);
-      font-family: "Parisienne", cursive;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .mobile-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      column-gap: 0.6rem;
-      padding: 0 1rem;
-      cursor: pointer;
-    }
-
-    .mobile-logo img {
-      /* width: 100%; */
-      width: 3.5rem;
     }
   }
 </style>
