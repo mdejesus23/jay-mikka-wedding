@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import FloralImage from "../components/FloralImage.astro";
 
 import "../styles/global.css";
 const { pageTitle } = Astro.props;
@@ -25,11 +26,13 @@ const { pageTitle } = Astro.props;
   <body>
     <Header />
     <main>
+  <FloralImage/>
       <slot />
     </main>
     <Footer />
     <script>
       import "../scripts/menu";
+      import "../scripts/animationUponRender.js"
     </script>
   </body>
 </html>

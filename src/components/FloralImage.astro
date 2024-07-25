@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+
+import leftFloralImage from "../images/floral-left.png"
+import rightFloralImage from "../images/floral-right.png"
+---
+
+<Image class="right-floral-img floral-img" src={rightFloralImage} alt="floral image" />
+<Image class="left-floral-img floral-img" src={leftFloralImage} alt="floral image" />
+
+<style>
+    .right-floral-img {
+        width: 40rem;
+        height: 40rem;
+        position: absolute;
+        top: 7rem;
+        right: 0;
+    }
+
+    .left-floral-img {
+        width: 40rem;
+        height: 40rem;
+        position: absolute;
+        top: 7rem;
+        left: 0;
+  }
+
+  @media(max-width: 900px) {
+    .left-floral-img {
+      width: 30rem;
+      height: 30rem;
+
+    }
+
+    .right-floral-img {
+      width: 30rem;
+      height: 30rem;
+
+    }
+  }
+
+  @media(max-width: 700px) {
+    .left-floral-img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .right-floral-img {
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+
+</style>

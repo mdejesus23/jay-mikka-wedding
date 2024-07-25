@@ -105,16 +105,29 @@
     width: 100%;
   }
 
-  section {
+  main {
     margin-top: 7rem;
     width: 100%;
     height: 100%;
-    min-height: 95vh;
+    min-height: 100vh;
     padding: 0;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
   }
+
+  .animated-section {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    visibility: hidden; /* Ensure it's not clickable or focusable */
+  }
+  
+  .animated-section.show {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }  
 
   img {
     width: 100%;
@@ -133,6 +146,7 @@
     height: 7rem;
     left: 0;
     right: 0;
+    z-index: 9;
   }
 
    
@@ -171,6 +185,11 @@
     text-align: center;
     color: var(--tertiary-font-color);
     margin: 0 auto;
+  }
+
+  .content-details a {
+    color: var(--tertiary-font-color);
+    text-decoration: underline;
   }
 
   .cursive {
@@ -319,20 +338,49 @@
     transition: transform 0.3s ease-in-out;
     z-index: -1;
 
-    background-image: url("/images/bg-mobile.jpg");
+    background-image: url("/images/bg-mobile2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
   }
   
   .mobile-nav.open {
-    transform: translateY(0);
+    /* transform: translateY(0);
     z-index: 1;
+    animation: slideDown 0.3s ease-in-out forwards; */
+    z-index: 100; /* Bring the menu to the front */
+    animation: zoomOut 0.2s ease-in-out forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes zoomOut {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0);
+    }
   }
   
   .mobile-nav.close {
-    transform: translateY(-100%);
-    z-index: -1;
+    animation: zoomIn 0.3s ease-in-out forwards;
   }
 
   .mobile-nav ul {
@@ -374,6 +422,8 @@
     color: var(--tertiary-font-color);
   }
 
+
+  /* menu button styles   */
   .navController .menuBtn {
     background: none;
     border: none;
@@ -418,6 +468,10 @@
     position: absolute;
     transform: rotate(45deg);
   }
+
+  .close .bar:first-of-type {
+   display: none;
+  }
   
   .menu-icon .bar.close:before {
     content: '';
@@ -439,11 +493,11 @@
 
     .content {
       /* background-image: url("/images/bg-floral-2.jpg"); */
-      background-image: url("/images/bg-floral.png");
+      /* background-image: url("/images/bg-floral.png");
 
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
+      background-repeat: no-repeat; */
     }
   
   
@@ -460,10 +514,10 @@
 
     .content {
       width: 100%;
-      background-image: url("/images/bg-floral.png");
+      /* background-image: url("/images/bg-floral.png");
       background-size: contain;
       background-repeat: no-repeat;
-     
+      */
     }
 
   }

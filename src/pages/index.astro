@@ -1,23 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+
 import MainImage from "../components/MainImage.astro";
 const pageTitle = "Wedding Website";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <section class="event-details">
-    <div class="content">
+  <section class="event-details animated-section">
       <div class="content-details">
         <p class="adlib">
           BY THE GRACE OF GOD <br /> AND WITH THE BLESSING OF OUR FAMILIES <br
           />WE.
         </p>
-
         <h1>Jay Mar <br /> and <br /> Ayessa Mikka</h1>
-
         <MainImage />
-
         <p class="adlib">
           REQUEST THE HONOR OF YOUR PRESENCE AT OUR WEDDING CELEBRATION
         </p>
@@ -28,13 +25,17 @@ const pageTitle = "Wedding Website";
           <div class="hour">AT 1:00 PM</div>
         </div>
         <div class="month">OCTOBER</div>
-        <h2>St. Pancratious Chapel, Paco Park Manila</h2>
+        <h2>
+          <a href="https://www.google.com/maps/place/St.+Pancratius+Chapel/@14.5816207,120.9864664,17z/data=!3m1!4b1!4m6!3m5!1s0x3397c986ed040063:0xa11eec35ab7eaff8!8m2!3d14.5816155!4d120.9890413!16s%2Fg%2F1tflcsd9?entry=ttu" target="_blank">
+            St. Pancratious Chapel, Paco Park Manila
+          </a>
+        </h2>
         <div class="adlib cursive">Reception to follow at</div>
-        <h2>Rosas Garden Hotel</h2>
-        <div class="adlib cursive">
-          1140 M.H. Del Pilar St, Ermita, Manila, 1000 Metro Manila
-        </div>
+        <h2>
+          <a href="https://www.google.com/maps/place/Rosas+Garden+Hotel/@14.5781666,120.977414,17z/data=!3m1!4b1!4m9!3m8!1s0x3397ca2f79ab1e33:0x9ad2680c49851d90!5m2!4m1!1i2!8m2!3d14.5781614!4d120.9799889!16s%2Fg%2F1tdgmc60?entry=ttu" target="_blank">
+            Rosas Garden Hotel
+          </a>
+        </h2>
       </div>
-    </div>
   </section>
 </BaseLayout>
