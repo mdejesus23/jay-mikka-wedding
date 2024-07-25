@@ -3,6 +3,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from 'astro:assets';
 import Carousel from "../components/Carousel.astro";
 
+const funFacts = [
+    "We first met in 2016 at Universidad De Manila.",
+    "We were classmates from our second year of college until we graduated.",
+    "We've been dating for 7 years and 8 months now.",
+    "I was the first to have a crush on Jay because I thought he was quiet, so I made the first move to talk to him.",
+    "The first time we held hands was on the 9th day after I said yes to him, which was on November 1, 2016, at 3:16am via call, hahaha.",
+    "Our first date was at KKK, and it was a siomai date.",
+    "In our almost 8-year relationship, we broke up twice, but it always lasted only a day or two, hahaha, because we realized we couldn't be without each other."
+];
+
 const pageTitle = "Our Story";
 ---
 
@@ -12,62 +22,33 @@ const pageTitle = "Our Story";
       <div>
         <h1>Our Story</h1>
         <Carousel />
+        <div>
+          <h2>Fun facts about us</h2>
+          <ol>
+            {funFacts.map(data => <li>{data}</li>) }
+          </ol>
+        </div>
+        <div>
+          <h2>Three things I love about Jay</h2>
+          <ul>
+            <li>It's his playful nature, because when he's around, I know everything will instantly feel more joyful.</li>
+            <li>It's his caring nature towards me, because no matter what happens, he never really abandons me.</li>
+            <li>His effort and patience throughout our relationship, he's the best.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Three things I love about Mikka</h2>
+          <ul>
+            <li>It's his playful nature, because when he's around, I know everything will instantly feel more joyful.</li>
+            <li>It's his caring nature towards me, because no matter what happens, he never really abandons me.</li>
+            <li>His effort and patience throughout our relationship, he's the best.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 </BaseLayout>
 
-<style>
-  .ourstorySection {
-    width: 100%;
-    height: 100%;
-  }
-
-  .ourstorySection .right-floral-img {
-    width: 40rem;
-    height: 40rem;
-    position: absolute;
-    top: 7rem;
-    right: 0;
-  }
-
-  .ourstorySection .left-floral-img {
-    width: 40rem;
-    height: 40rem;
-    position: absolute;
-    top: 7rem;
-    left: 0;
-  }
-
-  @media(max-width: 900px) {
-      .ourstorySection .left-floral-img {
-      width: 30rem;
-      height: 30rem;
-
-    }
-
-    .ourstorySection .right-floral-img {
-      width: 30rem;
-      height: 30rem;
-
-    }
-  }
-
-  @media(max-width: 700px) {
-      .ourstorySection .left-floral-img {
-        width: 20rem;
-        height: 20rem;
-    }
-
-    .ourstorySection .right-floral-img {
-      width: 20rem;
-      height: 20rem;
-    }
-  }
-
-
-
-
-</style>
 
 

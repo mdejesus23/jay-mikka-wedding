@@ -557,7 +557,8 @@
 
     .content-details {
       padding: 3rem 1rem 1rem 1rem;
-      width: 95%;
+      width: 100%;
+      margin: 0 auto;
     }
 
   }
