@@ -1,0 +1,62 @@
+<div class="wedd-date">
+  <p class="adlib cursive">See you at</p>
+  <div class="date">
+    <div class="day">SATURDAY</div>
+    <div class="day-num">05</div>
+    <div class="hour">AT 1:00 PM</div>
+  </div>
+  <div class="month">OCTOBER</div>
+</div>
+
+<style>
+  .wedd-date {
+    margin: 1.5rem auto;
+  }
+
+  .date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .date .day {
+    padding: 1rem;
+    border-top: 2px solid var(--tertiary-bgcolor);
+    border-bottom: 2px solid var(--tertiary-bgcolor);
+  }
+
+  .date .day-num {
+    font-family: "times new roman";
+    font-size: 6rem;
+    font-weight: 700;
+  }
+
+  .date .hour {
+    padding: 1rem;
+    border-top: 2px solid var(--tertiary-bgcolor);
+    border-bottom: 2px solid var(--tertiary-bgcolor);
+  }
+
+  .month {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 900px) {
+    .date {
+      /* flex-direction: column; */
+      column-gap: 2rem;
+      font-size: 4rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .date {
+      font-size: 2.5rem;
+    }
+  }
+</style>
