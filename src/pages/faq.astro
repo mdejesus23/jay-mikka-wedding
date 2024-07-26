@@ -1,13 +1,104 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import faqs from "../data/faq";
 
 const pageTitle = "FAQ";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <section>
-    <div>
-      <h1>TEST PAGE!</h1>
+  <section class="animated-section faq">
+    <div class="content-details">
+      <h1>Frequenty Asked Questions</h1>
+
+      <div class="faq-content">
+        {
+          faqs.map((faq) => (
+            <div class="faq-group">
+              <article class="faq-group-header">
+                <h3>{faq.question}</h3>
+                <span class="toggle-icon">{faq.isOpen ? "-" : "+"}</span>
+              </article>
+              <article class={"faq-group-body " + (faq.isOpen ? "open" : "")}>
+                <p>{faq.answer}</p>
+              </article>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </section>
+
+  <style>
+    .faq-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 3rem;
+      margin-bottom: 7rem;
+      margin-top: 3rem;
+    }
+
+    .faq .faq-group {
+      width: 80%;
+    }
+
+    .faq .faq-group-header {
+      position: relative;
+    }
+
+    .faq .faq-group-header h3 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      width: 95%;
+      color: #d4b968;
+    }
+
+    .faq .faq-group-header span {
+      position: absolute;
+      right: 0;
+      top: 0px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-family: "times new roman";
+      cursor: pointer;
+    }
+
+    .faq .faq-group-header span:hover {
+      color: #d4b968;
+    }
+
+    .faq .faq-group-body {
+      overflow: hidden;
+      max-height: 0;
+      transition:
+        max-height 0.5s ease,
+        opacity 0.5s ease;
+      opacity: 0;
+      padding: 1rem 2rem;
+    }
+
+    .faq .faq-group-body.open {
+      max-height: 300px; /* Adjust based on content size */
+      opacity: 1;
+    }
+
+    .faq-group-body p {
+      text-align: left;
+      line-height: 1.5;
+      font-size: 2rem;
+      text-align: justify;
+    }
+
+    @media (max-width: 500px) {
+      .faq .faq-group {
+        width: 95%;
+      }
+    }
+  </style>
+
+  <script>
+    import "../scripts/faq";
+  </script>
 </BaseLayout>

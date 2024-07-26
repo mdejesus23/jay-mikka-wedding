@@ -56,7 +56,7 @@ function MobileMenu() {
               <a href="/rsvp">RSVP</a>
             </li>
             <li>
-              <a href="/faq">FAQ</a>
+              <a href="/faq">FAQ's</a>
             </li>
           </ul>
         </nav>
