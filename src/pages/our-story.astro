@@ -67,7 +67,7 @@ const pageTitle = "Our Story";
   <style>
     .ourStorySection {
       font-size: 2rem;
-      line-height: 1.6;
+      line-height: 1.7;
       /* text-align: center; */
     }
 
@@ -79,11 +79,6 @@ const pageTitle = "Our Story";
       margin-bottom: 2rem;
     }
 
-    .ourStorySection img {
-      width: 20px;
-      height: 20px;
-    }
-
     .ourStorySection li {
       display: flex;
       justify-items: center;
@@ -91,12 +86,25 @@ const pageTitle = "Our Story";
       gap: 1rem;
       font-weight: 600;
       text-align: justify;
-      /* margin-bottom: 1rem; */
+      padding: 0.6rem 0;
     }
 
-    .ourStorySection li img {
-      width: 20px;
-      height: 20px;
+    .ourStorySection li::before {
+      content: ""; /* Custom bullet point */
+      position: absolute;
+      left: 0;
+    }
+
+    .ourStorySection li::after {
+      content: "";
+      display: block;
+      margin-left: 20px; /* Indent second line */
+    }
+
+    .ourStorySection li {
+      margin: 0;
+      text-indent: -20px; /* Negative indent to pull first line back */
+      padding-left: 20px; /* Indentation size */
     }
   </style>
 </BaseLayout>
