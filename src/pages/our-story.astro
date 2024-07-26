@@ -7,17 +7,17 @@ const funFacts = [
     "We first met in 2016 at Universidad De Manila.",
     "We were classmates from our second year of college until we graduated.",
     "We've been dating for 7 years and 8 months now.",
-    "I was the first to have a crush on Jay because I thought he was quiet, so I made the first move to talk to him.",
-    "The first time we held hands was on the 9th day after I said yes to him, which was on November 1, 2016, at 3:16am via call, hahaha.",
+    "Mikka was the first to have a crush on Jay because she thought he was quiet, so she made the first move to talk to him.",
+    "The first time they held hands was on the 9th day after Mikka said yes to Jay, which was on November 1, 2016, at 3:16am via call.",
     "Our first date was at KKK, and it was a siomai date.",
-    "In our almost 8-year relationship, we broke up twice, but it always lasted only a day or two, hahaha, because we realized we couldn't be without each other."
+    "In their almost 8-year relationship, they broke up twice, but it always lasted only a day or two, because they realized they couldn't be without each other.🥰"
 ];
 
 const pageTitle = "Our Story";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <section class="animated-section">
+  <section class="animated-section ourStorySection">
     <div class="content-details">
       <div>
         <h1>Our Story</h1>
@@ -25,29 +25,61 @@ const pageTitle = "Our Story";
         <div>
           <h2>Fun facts about us</h2>
           <ol>
-            {funFacts.map(data => <li>{data}</li>) }
+            {funFacts.map(data => (<li>
+              <span class="logo-container"><img src="/images/wedding-ring.png" alt="logo" /></span>
+              {data}</li>)) }
           </ol>
         </div>
         <div>
-          <h2>Three things I love about Jay</h2>
+          <h2>3 things I love about Jay</h2>
           <ul>
-            <li>It's his playful nature, because when he's around, I know everything will instantly feel more joyful.</li>
-            <li>It's his caring nature towards me, because no matter what happens, he never really abandons me.</li>
-            <li>His effort and patience throughout our relationship, he's the best.</li>
+            <li><span class="logo-container"><img src="/images/wedding-ring.png" alt="logo" /></span>It's his playful nature, because when he's around, I know everything will instantly feel more joyful.</li>
+            <li><span class="logo-container"><img src="/images/wedding-ring.png" alt="logo" /></span>It's his caring nature towards me, because no matter what happens, he never really abandons me.</li>
+            <li><span class="logo-container"><img src="/images/wedding-ring.png" alt="logo" /></span>His effort and patience throughout our relationship, he's the best.</li>
           </ul>
         </div>
 
         <div>
-          <h2>Three things I love about Mikka</h2>
+          <h2>3 things I love about Mikka</h2>
           <ul>
-            <li>It's his playful nature, because when he's around, I know everything will instantly feel more joyful.</li>
-            <li>It's his caring nature towards me, because no matter what happens, he never really abandons me.</li>
-            <li>His effort and patience throughout our relationship, he's the best.</li>
+            <li><span class="logo-container"><img src="/images/wedding-ring.png" alt="logo" /></span>It's his playful nature, because when he's around, I know everything will instantly feel more joyful.</li>
+            <li><span class="logo-container"><img src="/images/wedding-ring.png" alt="logo" /></span>It's his caring nature towards me, because no matter what happens, he never really abandons me.</li>
+            <li><span class="logo-container"><img src="/images/wedding-ring.png" alt="logo" /></span>His effort and patience throughout our relationship, he's the best.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
+
+  <style>
+    .ourStorySection {
+      font-size: 2rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .ourStorySection img {
+     width: 20px;
+     height: 20px;
+    }
+
+
+    .ourStorySection li {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      gap: 1rem;
+      /* margin-bottom: 1rem; */
+    }
+
+
+    .ourStorySection li img {
+     width: 20px;
+     height: 20px;
+    }
+
+
+  </style>
 </BaseLayout>
 
 

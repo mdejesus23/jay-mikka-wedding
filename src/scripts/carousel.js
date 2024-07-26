@@ -30,9 +30,9 @@ function showSlides(n) {
 }
 
 document.querySelector("#next")?.addEventListener("click", () => {
-  showSlides((slideIndex -= 1)); // Decrement slideIndex by 1
+  showSlides((slideIndex -= -1)); // Decrement slideIndex by 1
 });
 
 document.querySelector("#prev")?.addEventListener("click", () => {
-  showSlides((slideIndex -= -1)); // Decrement slideIndex by 1
+  showSlides((slideIndex -= 1)); // Decrement slideIndex by 1
 });
