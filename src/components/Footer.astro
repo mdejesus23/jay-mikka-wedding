@@ -1,29 +1,100 @@
 ---
 import { Image } from "astro:assets";
-import facebook_icon from "../icons/facebook_icon.svg";
-
-import threads_icon from "../icons/threads_icon.svg";
-import x_icon from "../icons/x_icon.svg";
+import facebook_icon from "../icons/icons8-facebook.svg";
+import instagram from "../icons/icons8-instagram.svg";
+import twitter from "../icons/icons8-twitter.svg";
+import tiktok from "../icons/icons8-tiktok.svg";
 ---
 
 <footer>
-  <div class="row3">Follow us on social media</div>
+  <p class="row3">
+    HELP US CAPTURE OUR SPECIAL DAY AND SHARE IT BY TAGGING US USING THIS
+    HASHTAG
+  </p>
+  <p class="hashtag">#sawakasMIKKAlalagyannasiJAY</p>
   <ul class="social-icons">
     <li>
-      <a href="">
-        <Image src={facebook_icon} alt="facebook" width="25" height="25" />
+      <a href="https://www.facebook.com/">
+        <Image src={facebook_icon} alt="facebook" />
       </a>
     </li>
     <li>
-      <a href="">
-        <Image src={threads_icon} alt="threads" width="25" height="25" />
+      <a href="https://www.instagram.com/">
+        <Image src={instagram} alt="instagram" />
       </a>
     </li>
     <li>
-      <a href="">
-        <Image src={x_icon} alt="X / twitter" width="25" height="25" />
+      <a href="https://x.com/home">
+        <Image src={twitter} alt="twitter" />
+      </a>
+    </li>
+    <li>
+      <a href="https://x.com/home">
+        <Image src={tiktok} alt="tiktok" />
       </a>
     </li>
   </ul>
-  <p>Copyrights &copy; All Rights Reserved.</p>
+  <p class="copyrights">Copyrights &copy; All Rights Reserved.</p>
 </footer>
+
+<style>
+  /* footer */
+  footer {
+    background: var(--primary-gradient);
+    /* color: var(--tertiary-font-color); */
+    color: var(--primary-font-color);
+
+    font-size: 1.6rem;
+    padding: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+  }
+
+  footer div {
+    /* font-size: 1.4rem; */
+    font-weight: 500;
+  }
+
+  footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  footer .hashtag {
+    color: var(--tertiary-font-color);
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem;
+  }
+
+  .social-icons li {
+    transition: opacity 0.3s;
+  }
+
+  .social-icons li:hover {
+    opacity: 50%;
+  }
+
+  .social-icons img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  footer .copyrights {
+    font-size: 1.4rem;
+  }
+</style>
