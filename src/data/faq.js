@@ -38,12 +38,6 @@ const faqs = [
   {
     question: "Can we bring our Kids?",
     answer:
-      "As much as we love your kids, we want the event to be for adults only.",
-    isOpen: false,
-  },
-  {
-    question: "Can we bring our Kids?",
-    answer:
       "As much as we love your kids, we want the event to be for adults only. The only kids who will be attending are those who are part of the entourage, and the children included in the guest list. We are hoping for your kind understanding.",
     isOpen: false,
   },

@@ -1,13 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CountdownTimer from "../components/CountDownTimer";
+import Form from "../components/Form.astro";
 
+const targetDate = "October 5, 2024 00:00:00";
 const pageTitle = "RSVP";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <section class="animated-section rsvp">
     <div class="content-details">
-      <h1>RSVP</h1>
+      <h1>Reserve Your Spot</h1>
+      <CountdownTimer client:load targetDate={targetDate} />
+      <Form />
     </div>
   </section>
 </BaseLayout>
