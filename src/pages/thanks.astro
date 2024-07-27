@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section class="animated-section thanks">
+    <div class="content-details">
+      <h1>Thank you</h1>
+      <p>Your message was sent successfully.</p>
+      <p>Please wait a moment or <a href="/"> click here</a></p>
+    </div>
+  </section>
+
+  <style>
+    .thanks p {
+      text-align: center;
+      font-size: 2rem;
+    }
+  </style>
+
+  <script>
+    import "../scripts/redirectToHomePage";
+  </script>
+</BaseLayout>
