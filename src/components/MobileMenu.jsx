@@ -44,12 +44,6 @@ function MobileMenu() {
               <a href="/our-story">OUR STORY</a>
             </li>
             <li>
-              <a href="/entourage">ENTOURAGE</a>
-            </li>
-            <li>
-              <a href="/registry">REGISTRY</a>
-            </li>
-            <li>
               <a href="/gallery">GALLERY</a>
             </li>
             <li>

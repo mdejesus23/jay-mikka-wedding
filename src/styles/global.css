@@ -199,7 +199,30 @@
     color: var(--tertiary-font-color);
     /* margin: 2rem auto; */
   }
-  
+
+  .entourage {
+    width: 100%;
+    margin: 3rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .entourage a {
+  font-size: 1.8rem;
+   padding: 1.3rem 2.5rem;
+   border: none;
+   border-radius: 30px;
+   background: var(--primary-gradient);
+   color: var(--primary-font-color);
+   cursor: pointer;
+   text-decoration: none;
+   transition: color 0.3s;
+  }
+
+  .entourage a:hover {
+    color: var(--tertiary-font-color);
+  }
   
 
   /* footer */

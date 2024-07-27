@@ -59,6 +59,12 @@ const faqs = [
       "It took us almost a year to plan a wedding that everyone will hopefullyy enjoy. We aim to end the program at arround 7:00PM.",
     isOpen: false,
   },
+  {
+    question: "How can we help the couple have the best time?",
+    answer:
+      "RSVP now, wear proper attire, be on time, stay til' the end, and Enjoy!😊",
+    isOpen: false,
+  },
 ];
 
 export default faqs;
