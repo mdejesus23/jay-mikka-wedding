@@ -63,8 +63,8 @@ const pageTitle = "Gallery";
     .photo-grid {
       display: grid;
       gap: 1rem;
-      background: var(--primary-gradient);
-      padding: 2rem;
+      /* background: var(--primary-gradient); */
+      padding: 1rem;
       border-radius: 0.5rem;
     }
 
@@ -72,13 +72,21 @@ const pageTitle = "Gallery";
       width: 100%;
       height: auto;
       border-radius: 0.5rem;
-      border: 1px solid var(--tertiary-bgcolor);
+      /* border: 1px solid var(--tertiary-bgcolor); */
+      transition: all ease-in-out 0.3s;
+      cursor: pointer;
+    }
+
+    .photo-grid img:hover {
+      box-shadow: 0 4px 8px rgba(212, 185, 104, 0.7);
+      transform: scale(1.1);
     }
 
     /* Responsive Grid */
     @media (min-width: 576px) {
       .photo-grid {
         grid-template-columns: repeat(2, 1fr);
+        padding: 0.7rem;
       }
     }
 
