@@ -25,6 +25,18 @@ const pageTitle = "FAQ";
           ))
         }
       </div>
+
+      <div class="reminder">
+        <h2>PLEASE DON'T EAT AND RUN</h2>
+        <h3>How can we help the couple have the best time?</h3>
+        <ul>
+          <li>RSVP now!</li>
+          <li>Wear proper attire.</li>
+          <li>Be on thime.</li>
+          <li>Sta til' the end.</li>
+          <li>Enjoy!😉</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -89,6 +101,35 @@ const pageTitle = "FAQ";
       line-height: 1.5;
       font-size: 2rem;
       text-align: justify;
+    }
+
+    .reminder {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .reminder h2 {
+      color: var(--secondary-font-color);
+    }
+
+    .reminder h3 {
+      color: var(--tertiary-font-color);
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .reminder ul {
+      text-align: left;
+      list-style: circle;
+    }
+
+    .reminder li {
+      font-size: 2rem;
+      list-style-type: disc; /* Default list style type */
     }
 
     @media (max-width: 500px) {

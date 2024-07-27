@@ -1,6 +1,6 @@
 ---
 const isDev = import.meta.env.DEV;
-const mikkaEmailString = "";
+const mikkaEmailString = "jayandmikka@gmail.com";
 
 const redirectLink = isDev
   ? "http://localhost:4321"
@@ -11,7 +11,7 @@ const redirectLink = isDev
   <h2>RSVP</h2>
   <form
     id="contactForm"
-    action=`https://formsubmit.co/${mikkaEmailString}`
+    action=`https://formsubmit.co/jayandmikka@gmail.com`
     method="POST"
   >
     <!-- subject field -->
@@ -58,7 +58,7 @@ const redirectLink = isDev
           type="radio"
           id="accept"
           name="attendance"
-          value="accept"
+          value="accepted"
           required
         />
         <label for="accept">Joyfully Accepts</label>
@@ -68,7 +68,7 @@ const redirectLink = isDev
           type="radio"
           id="decline"
           name="attendance"
-          value="decline"
+          value="declined"
           required
         />
         <label for="decline">Regretfully Decline</label>

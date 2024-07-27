@@ -44,7 +44,7 @@ const faqs = [
   {
     question: "Do you have any gift preference?",
     answer:
-      "We are grateful for the time and effort you'll be spending just to be there on our special day. But if you desire to give nonetheless, monetaryy gift is the one we request.",
+      "We are grateful for the time and effort you'll be spending just to be there on our special day. But if you desire to give nonetheless, monetary gift is the one we request.",
     isOpen: false,
   },
   {

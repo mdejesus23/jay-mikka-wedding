@@ -1,13 +1,105 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Image1 from "../images/hero-wedd.jpeg";
+import Image2 from "../images/ring.jpeg";
+import Image3 from "../images/wedd-hero-img.jpg";
+import Image4 from "../images/wedd-img-1.jpeg";
+import Image5 from "../images/wedd-img-2.jpeg";
+import Image6 from "../images/wedd-img-3.jpeg";
+import Image7 from "../images/wedd-img-4.jpeg";
+import Image8 from "../images/wedd-img-5.jpeg";
+import Image9 from "../images/wedd-img-6.jpeg";
+import Image10 from "../images/wedd-img-7.jpeg";
+import Image11 from "../images/wedd-img-8.jpeg";
+import Image12 from "../images/wedd-img-9.jpeg";
+import Image13 from "../images/wedd-img-10.jpeg";
+import Image14 from "../images/wedd-img-11.jpeg";
 
 const pageTitle = "Gallery";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <section>
-    <div>
-      <h1>TEST PAGE!</h1>
+  <section class="animated-section gallery">
+    <div class="content-details">
+      <h1>Gallery</h1>
+
+      <!-- Photo Grid -->
+      <div class="row">
+        <div class="column">
+          <img src="/w3images/wedding.jpg" style="width:100%" />
+          <img src="/w3images/rocks.jpg" style="width:100%" />
+          <img src="/w3images/falls2.jpg" style="width:100%" />
+          <img src="/w3images/paris.jpg" style="width:100%" />
+          <img src="/w3images/nature.jpg" style="width:100%" />
+          <img src="/w3images/mist.jpg" style="width:100%" />
+          <img src="/w3images/paris.jpg" style="width:100%" />
+        </div>
+        <div class="column">
+          <img src="/w3images/underwater.jpg" style="width:100%" />
+          <img src="/w3images/ocean.jpg" style="width:100%" />
+          <img src="/w3images/wedding.jpg" style="width:100%" />
+          <img src="/w3images/mountainskies.jpg" style="width:100%" />
+          <img src="/w3images/rocks.jpg" style="width:100%" />
+          <img src="/w3images/underwater.jpg" style="width:100%" />
+        </div>
+        <div class="column">
+          <img src="/w3images/wedding.jpg" style="width:100%" />
+          <img src="/w3images/rocks.jpg" style="width:100%" />
+          <img src="/w3images/falls2.jpg" style="width:100%" />
+          <img src="/w3images/paris.jpg" style="width:100%" />
+          <img src="/w3images/nature.jpg" style="width:100%" />
+          <img src="/w3images/mist.jpg" style="width:100%" />
+          <img src="/w3images/paris.jpg" style="width:100%" />
+        </div>
+        <div class="column">
+          <img src="/w3images/underwater.jpg" style="width:100%" />
+          <img src="/w3images/ocean.jpg" style="width:100%" />
+          <img src="/w3images/wedding.jpg" style="width:100%" />
+          <img src="/w3images/mountainskies.jpg" style="width:100%" />
+          <img src="/w3images/rocks.jpg" style="width:100%" />
+          <img src="/w3images/underwater.jpg" style="width:100%" />
+        </div>
+      </div>
     </div>
   </section>
+
+  <style>
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+      -ms-flex: 25%; /* IE10 */
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
 </BaseLayout>

@@ -5,9 +5,29 @@ const pageTitle = "Registry";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <section>
-    <div>
-      <h1>TEST PAGE!</h1>
+  <section class="animated-section registry">
+    <div class="content-details">
+      <h1>Registry</h1>
+      <p>
+        We are so grateful for your presence at our special day! Your presence
+        is the greatest gift of all. However, if you wish to honor us with a
+        gift, we kindly ask for monetary gift to help us start our new life
+        together. Thank you so much!
+      </p>
     </div>
   </section>
+
+  <style>
+    .registry p {
+      font-size: 2.5rem;
+      text-align: justify;
+    }
+
+    @media (max-width: 1200px) {
+      .registry p {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </BaseLayout>
