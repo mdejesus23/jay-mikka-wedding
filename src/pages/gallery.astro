@@ -34,56 +34,222 @@ const pageTitle = "Gallery";
 
       <!-- Photo Grid -->
       <div class="photo-grid">
-        <Image src={Image1} alt="wedding image" />
-        <Image src={Image3} alt="wedding image" />
-        <Image src={Image2} alt="wedding image" />
-        <Image src={Image4} alt="wedding image" />
-        <Image src={Image5} alt="wedding image" />
-        <Image src={Image6} alt="wedding image" />
-        <Image src={Image8} alt="wedding image" />
-        <Image src={Image7} alt="wedding image" />
-        <Image src={Image10} alt="wedding image" />
-        <Image src={Image9} alt="wedding image" />
-        <Image src={Image11} alt="wedding image" />
-        <Image src={Image12} alt="wedding image" />
-        <Image src={Image13} alt="wedding image" />
-        <Image src={Image14} alt="wedding image" />
-        <Image src={Image15} alt="wedding image" />
+        <figure class="photo-grid__item photo-grid__item--1">
+          <!-- horizontal -->
+          <Image src={Image1} alt="wedding image" class="photo-grid__img" />
+        </figure>
+        <figure class="photo-grid__item photo-grid__item--2">
+          <!-- horizontal -->
+          <Image src={Image3} alt="wedding image" class="photo-grid__img" />
+        </figure>
+        <figure class="photo-grid__item photo-grid__item--3">
+          <!-- vertical -->
+          <Image src={Image2} alt="wedding image" class="photo-grid__img" />
+        </figure>
+        <figure class="photo-grid__item photo-grid__item--4">
+          <!-- horizontal -->
+          <Image src={Image4} alt="wedding image" class="photo-grid__img" />
+        </figure>
+        <figure class="photo-grid__item photo-grid__item--5">
+          <!-- horizontal -->
+          <Image src={Image5} alt="wedding image" class="photo-grid__img" />
+        </figure>
 
-        <Image src={Image16} alt="wedding image" />
-        <Image src={Image17} alt="wedding image" />
-        <Image src={Image18} alt="wedding image" />
-        <Image src={Image19} alt="wedding image" />
-        <Image src={Image20} alt="wedding image" />
+        <figure class="photo-grid__item photo-grid__item--6">
+          <!-- horizontal -->
+          <Image src={Image8} alt="wedding image" class="photo-grid__img" />
+        </figure>
+
+        <figure class="photo-grid__item photo-grid__item--7">
+          <!-- vertical -->
+          <Image src={Image6} alt="wedding image" class="photo-grid__img" />
+        </figure>
+
+        <figure class="photo-grid__item photo-grid__item--8">
+          <!-- vertical -->
+          <Image src={Image7} alt="wedding image" class="photo-grid__img" />
+        </figure>
+
+        <figure class="photo-grid__item photo-grid__item--9">
+          <!-- horizontal -->
+          <Image src={Image20} alt="wedding image" class="photo-grid__img" />
+        </figure>
+
+        <figure class="photo-grid__item photo-grid__item--10">
+          <!-- horizontal -->
+          <Image src={Image11} alt="wedding image" class="photo-grid__img" />
+        </figure>
+
+        <figure class="photo-grid__item photo-grid__item--11">
+          <!-- vertical -->
+          <Image src={Image17} alt="wedding image" class="photo-grid__img" />
+        </figure>
+
+        <figure class="photo-grid__item photo-grid__item--12">
+          <!-- horizontal -->
+          <Image src={Image12} alt="wedding image" class="photo-grid__img" />
+        </figure>
+
+        <figure class="photo-grid__item photo-grid__item--13">
+          <!-- horizontal -->
+          <Image src={Image14} alt="wedding image" class="photo-grid__img" />
+        </figure>
+
+        <figure class="photo-grid__item photo-grid__item--14">
+          <!-- horizontal -->
+          <Image src={Image18} alt="wedding image" class="photo-grid__img" />
+        </figure>
+
+        <figure class="photo-grid__item photo-grid__item--15">
+          <!-- vertical -->
+          <Image src={Image9} alt="wedding image" class="photo-grid__img" />
+        </figure>
+
+        <figure class="photo-grid__item photo-grid__item--16">
+          <!-- vertical -->
+          <Image src={Image13} alt="wedding image" class="photo-grid__img" />
+        </figure>
       </div>
     </div>
-  </section>
 
-  <style>
-    .photo-grid {
-      display: grid;
-      gap: 1rem;
-      /* background: var(--primary-gradient); */
-      padding: 1rem;
-      border-radius: 0.5rem;
-    }
+    <style>
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(26, 5vw);
+        grid-gap: 15px;
+      }
 
-    .photo-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 0.5rem;
-      /* border: 1px solid var(--tertiary-bgcolor); */
-      transition: all ease-in-out 0.3s;
-      cursor: pointer;
-    }
+      .photo-grid__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:
+          box-shadow 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+        cursor: pointer;
+        border-radius: 5px;
+      }
 
-    .photo-grid img:hover {
-      box-shadow: 0 4px 8px rgba(212, 185, 104, 0.7);
-      transform: scale(1.1);
-    }
+      .photo-grid__img:hover {
+        box-shadow: 0 4px 8px rgba(212, 185, 104, 0.7);
+        transform: scale(1.05);
+      }
 
-    /* Responsive Grid */
-    @media (min-width: 576px) {
+      .photo-grid__item--1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      .photo-grid__item--2 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      .photo-grid__item--3 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 6;
+      }
+
+      .photo-grid__item--4 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 6;
+      }
+
+      .photo-grid__item--5 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 6;
+        grid-row-end: 9;
+      }
+
+      .photo-grid__item--6 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 6;
+        grid-row-end: 9;
+      }
+
+      .photo-grid__item--7 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 9;
+        grid-row-end: 14;
+      }
+
+      .photo-grid__item--8 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 9;
+        grid-row-end: 14;
+      }
+
+      .photo-grid__item--9 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 14;
+        grid-row-end: 16;
+      }
+
+      .photo-grid__item--10 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 14;
+        grid-row-end: 16;
+      }
+
+      .photo-grid__item--11 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 14;
+        grid-row-end: 19;
+      }
+
+      .photo-grid__item--12 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 16;
+        grid-row-end: 19;
+      }
+
+      .photo-grid__item--13 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 19;
+        grid-row-end: 22;
+      }
+
+      .photo-grid__item--14 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 19;
+        grid-row-end: 22;
+      }
+
+      .photo-grid__item--15 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 22;
+        grid-row-end: 27;
+      }
+
+      .photo-grid__item--16 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 22;
+        grid-row-end: 27;
+      }
+
+      /* Responsive Grid */
+      /* @media (min-width: 576px) {
       .photo-grid {
         grid-template-columns: repeat(2, 1fr);
         padding: 0.7rem;
@@ -111,6 +277,7 @@ const pageTitle = "Gallery";
       .photo-grid {
         grid-template-columns: repeat(5, 1fr);
       }
-    }
-  </style>
+    } */
+    </style>
+  </section>
 </BaseLayout>
