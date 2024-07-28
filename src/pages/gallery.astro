@@ -117,7 +117,7 @@ const pageTitle = "Gallery";
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(26, 5vw);
-        grid-gap: 15px;
+        grid-gap: 1.5rem;
       }
 
       .photo-grid__img {
@@ -133,7 +133,7 @@ const pageTitle = "Gallery";
 
       .photo-grid__img:hover {
         box-shadow: 0 4px 8px rgba(212, 185, 104, 0.7);
-        transform: scale(1.05);
+        transform: scale(1.02);
       }
 
       .photo-grid__item--1 {
@@ -248,36 +248,46 @@ const pageTitle = "Gallery";
         grid-row-end: 27;
       }
 
-      /* Responsive Grid */
-      /* @media (min-width: 576px) {
-      .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0.7rem;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .photo-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (min-width: 992px) {
-      .photo-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .photo-grid {
-        max-width: 90%;
-        margin: 0 auto;
+      @media (max-width: 1200px) {
+        .photo-grid {
+          width: 80%;
+          margin: 0 auto;
+        }
       }
 
-      .photo-grid {
-        grid-template-columns: repeat(5, 1fr);
+      @media (max-width: 768px) {
+        .photo-grid {
+          width: 100%;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .photo-grid__item--1,
+        .photo-grid__item--2,
+        .photo-grid__item--3,
+        .photo-grid__item--4,
+        .photo-grid__item--5,
+        .photo-grid__item--6,
+        .photo-grid__item--7,
+        .photo-grid__item--8,
+        .photo-grid__item--9,
+        .photo-grid__item--10,
+        .photo-grid__item--11,
+        .photo-grid__item--12,
+        .photo-grid__item--13,
+        .photo-grid__item--14,
+        .photo-grid__item--15,
+        .photo-grid__item--16 {
+          grid-column-start: auto;
+          grid-column-end: auto;
+          grid-row-start: auto;
+          grid-row-end: auto;
+        }
+
+        .photo-grid__img {
+          height: auto;
+        }
       }
-    } */
     </style>
   </section>
 </BaseLayout>
