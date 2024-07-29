@@ -1,0 +1,115 @@
+---
+import { Image } from "astro:assets";
+import closeButton from "../icons/icons8-close.svg";
+---
+
+<div class="overlay">
+  <button class="closeModalBtn"> x </button>
+  <div class="modal"></div>
+</div>,
+
+<style>
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay with 80% opacity */
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    transition: all 0.5s;
+  }
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-color06);
+    border-radius: 9px;
+    box-shadow: var(--shadow-lg);
+    padding: 3.2rem 4rem;
+    transition: all 0.5s;
+
+    color: var(--text-color01);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .modal h3 {
+    color: var(--text-color01);
+  }
+
+  .modal p {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.6rem;
+  }
+
+  .closeModalBtn {
+    background: none;
+    border: none;
+    padding: 0.4rem;
+    border-radius: var(--border-radius-sm);
+    transform: translateX(0.8rem);
+    transition: all 0.2s;
+
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    cursor: pointer;
+
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .closeModalBtn:hover {
+    color: red;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .modal {
+      width: 90%;
+      padding: 2rem;
+      gap: 1.5rem;
+    }
+
+    .closeModalBtn {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.4rem;
+      top: 1rem;
+      right: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .modal {
+      width: 95%;
+      padding: 1.5rem;
+      gap: 1rem;
+    }
+
+    .closeModalBtn {
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 2.5rem;
+      top: 0.8rem;
+      right: 1.2rem;
+    }
+  }
+</style>
