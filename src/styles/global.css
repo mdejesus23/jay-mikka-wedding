@@ -453,6 +453,10 @@
     align-items: center;
   }
 
+  .modal img {
+    height: 500px;
+  }
+
 
   @media (min-width: 1200.1px) {
     html {
