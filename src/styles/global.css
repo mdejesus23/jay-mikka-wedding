@@ -163,6 +163,7 @@
   .content-details {
     width: 100%;
     max-width: 1000px;
+    min-height: 100vh;
     height: 100%;
     padding: 3rem;
     margin: auto;
