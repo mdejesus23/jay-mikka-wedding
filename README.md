@@ -1,6 +1,8 @@
 # Wedding Website
 
-Welcome to our wedding website repository! This project is designed to celebrate our special day and share important information with our guests.
+![Alt text](./public/images/wedding.JPG)
+
+Welcome to our wedding website repository! This project is designed to organize and digitalize wedding events.
 
 ## Features
 
