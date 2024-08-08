@@ -1,0 +1,24 @@
+---
+const { pageTitle, description, url = Astro.url, robots } = Astro.props;
+---
+
+<!-- SEO -->
+<link rel="canonical" href={url} />
+
+<!-- Open Graph -->
+<!-- Open Graph Tags (for social media sharing):-->
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:site_name" content="Jay & Mikka Wedding" />
+<meta property="og:url" content={url} />
+
+<!-- Twitter -->
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+  name="twitter:domain"
+  content="https://jayandmikka-wedding.netlify.app/"
+/>
+
+{robots && <meta name="robots" content="noindex, nofollow" />}

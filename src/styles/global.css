@@ -289,42 +289,32 @@
   }
   
   .mobile-nav.open {
-    /* transform: translateY(0);
-    z-index: 1;
-    animation: slideDown 0.3s ease-in-out forwards; */
+    transform: translateY(0); /* Slide in */
     z-index: 100; /* Bring the menu to the front */
     animation: zoomOut 0.2s ease-in-out forwards;
   }
-
-  @keyframes slideDown {
-    from {
-      transform: translateY(-100%);
-    }
-    to {
-      transform: translateY(0);
-    }
+  
+  .mobile-nav.close {
+    transform: translateY(-100%); /* Slide out */
+    animation: zoomIn 0.3s ease-in-out forwards;
   }
-
+  
   @keyframes zoomOut {
     from {
-      transform: scale(0);
+      transform: scale(0.9);
     }
     to {
       transform: scale(1);
     }
   }
-
+  
   @keyframes zoomIn {
     from {
       transform: scale(1);
     }
     to {
-      transform: scale(0);
+      transform: scale(0.9);
     }
-  }
-  
-  .mobile-nav.close {
-    animation: zoomIn 0.3s ease-in-out forwards;
   }
 
   .mobile-nav ul {
