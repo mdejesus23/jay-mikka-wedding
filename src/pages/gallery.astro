@@ -30,6 +30,15 @@ const description =
   <section class="animated-section gallery">
     <div class="content-details">
       <h1>Gallery</h1>
+      <div class="gallery__intro">
+        <p>
+          Welcome to our Wedding Gallery! Here, you'll find a collection of
+          memorable pictures from our prenuptial photoshoot. Each image captures
+          the essence of our love story, the joy of our journey together, and
+          the anticipation of our special day. We hope you enjoy these cherished
+          moments as much as we do!💕
+        </p>
+      </div>
 
       <!-- Photo Grid -->
       <div class="photo-grid">
@@ -117,6 +126,15 @@ const description =
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(26, 5vw);
         grid-gap: 1.5rem;
+      }
+
+      .gallery__intro {
+        margin-bottom: 4rem;
+      }
+
+      .gallery__intro p {
+        font-size: 2rem;
+        text-align: justify;
       }
 
       .photo-grid__img {
