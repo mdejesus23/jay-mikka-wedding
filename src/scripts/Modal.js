@@ -12,7 +12,6 @@ const closeModalButton = document
 
 image.forEach((img) => {
   img.addEventListener("click", (e) => {
-    console.log(e.target);
     overlay.style.display = "block";
 
     // Clear any previous image in the modal
