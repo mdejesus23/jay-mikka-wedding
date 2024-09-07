@@ -5,9 +5,9 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://jayandmikka-wedding.netlify.app/",
   image: {
     service: squooshImageService(),
   },
   integrations: [preact(), sitemap()],
-  site: "https://jayandmikka-wedding.netlify.app/",
 });
