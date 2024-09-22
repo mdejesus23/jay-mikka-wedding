@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("astro:page-load", () => {
   let slides = document.getElementsByClassName("mySlides");
   let slideIndex = 1;
   showSlides(slideIndex);

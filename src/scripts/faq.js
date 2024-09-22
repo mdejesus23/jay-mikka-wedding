@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("astro:page-load", () => {
   const faqContainer = document.querySelector(".faq-content");
 
   faqContainer.addEventListener("click", (e) => {
