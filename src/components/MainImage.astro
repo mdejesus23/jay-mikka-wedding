@@ -3,12 +3,13 @@ import { Image } from "astro:assets";
 import mainImage from "../images/ring.jpeg";
 ---
 
-<div class="main-image">
+<figure class="main-image">
   <Image class="main-image" src={mainImage} alt={"main image"} />
-</div>
+</figure>
 
 <style>
   .main-image {
+    border-radius: 8px;
     width: 100%;
     margin: 0 auto;
     text-align: center;
